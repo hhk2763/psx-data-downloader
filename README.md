@@ -413,6 +413,10 @@ What that means in practice:
 - ❌ Don't raise the request rate or add concurrency to make it faster.
 - ➡️ If your use turns commercial, get a PSX data licence first.
 
+**Licence:** the *code* is [MIT licensed](LICENSE) — use it, change it, share it
+freely. The *data* it downloads is not covered by that licence and never becomes yours
+to redistribute.
+
 This project is not affiliated with, endorsed by, or connected to the Pakistan Stock
 Exchange. It ships with no warranty — verify anything you rely on against PSX's own
 published reports before trading on it.
