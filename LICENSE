@@ -19,18 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----------------------------------------------------------------------------
-
-NOTE ON SCOPE
-
-This licence covers the source code of PSX Data Downloader and nothing else.
-
-It does NOT grant any rights to the market data this tool retrieves. That data
-belongs to the Pakistan Stock Exchange and is governed by PSX's own Terms of
-Use, which restrict automated retrieval and prohibit redistributing or
-commercially using the data without a licence from PSX
-(marketdatarequest@psx.com.pk).
-
-In short: the code is yours to use and modify freely; the data is not. See the
-"Legal and fair use" section of README.md.
