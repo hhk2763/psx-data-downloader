@@ -1,0 +1,29 @@
+# PSX Data Downloader — runtime settings.
+# Politeness values here are non-negotiable per CLAUDE.md: one request at a time,
+# no concurrency. Do not lower the delay.
+
+base_url: https://dps.psx.com.pk
+
+# Where the archive lives. Relative paths resolve against the project root.
+data_dir: data
+
+# Politeness
+delay_seconds: 1.5        # minimum wait before every request
+jitter_seconds: 0.5       # random extra wait, 0..jitter, added to the delay
+timeout: 30               # per-request timeout, seconds
+retries: 3                # max attempts per URL (5xx / timeout only)
+backoff_seconds: 2.0      # exponential base: 2s, 4s, 8s ...
+max_consecutive_errors: 10  # stop the job after this many errors in a row
+
+# A normal browser User-Agent, as required by CLAUDE.md.
+user_agent: >-
+  Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+  (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36
+
+# Re-check dates recorded as `missing` if they fall within this many days of
+# today: PSX sometimes publishes late.
+recheck_days: 3
+
+# PKT hour after which today's files are expected to exist. Before this hour,
+# `last completed trading day` means the previous weekday.
+publish_hour_pkt: 19

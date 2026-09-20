@@ -1,0 +1,167 @@
+# PSX dataset registry — daily, date-keyed downloads.
+#
+# Source of truth for this file is the dataset table in CLAUDE.md.
+# Adding a dataset means adding an entry here; no code change is needed.
+#
+# URL pattern:  {base_url}/download/{key}/{YYYY-MM-DD}.{ext}
+#
+# first_available: the earliest date the dataset exists on the site. `null`
+# until `cli.py probe` (Phase 2) discovers it. While null, fetch has no lower
+# bound and early dates simply record as `missing`.
+
+datasets:
+  # ---- Market Summary -------------------------------------------------
+  - key: mkt_summary
+    label: Market Summary (Closing)
+    section: Market Summary
+    exts: ["Z"]
+    first_available: null
+
+  - key: closing_rates
+    label: Closing Rate Summary
+    section: Market Summary
+    exts: ["pdf"]
+    first_available: null
+
+  - key: symbol_price
+    label: Symbol Price (Upper/Lower)
+    section: Market Summary
+    exts: ["zip"]
+    first_available: null
+
+  - key: symbol_name
+    label: Symbols Short Long Name
+    section: Market Summary
+    exts: ["zip"]
+    first_available: null
+
+  - key: reval_rates_gis
+    label: GIS Revaluation Rates
+    section: Market Summary
+    exts: ["csv", "pdf"]
+    first_available: null
+
+  - key: dvf_trade
+    label: Bai Muajjal Volume
+    section: Market Summary
+    exts: ["csv"]
+    first_available: null
+
+  # ---- Off Market / NDM -----------------------------------------------
+  - key: nd_accepted
+    label: ND Accepted
+    section: "Off Market / NDM"
+    exts: ["pdf"]
+    first_available: null
+
+  - key: nd_rejected
+    label: ND Rejected
+    section: "Off Market / NDM"
+    exts: ["pdf"]
+    first_available: null
+
+  - key: nd_threshold
+    label: ND Threshold
+    section: "Off Market / NDM"
+    exts: ["pdf"]
+    first_available: null
+
+  - key: omts
+    label: Off Market Transaction Summary
+    section: "Off Market / NDM"
+    exts: ["csv"]
+    first_available: null
+
+  - key: omtpdf
+    label: Off Market Transaction (PDF)
+    section: "Off Market / NDM"
+    exts: ["pdf"]
+    first_available: null
+
+  # ---- Futures Market --------------------------------------------------
+  - key: fut_opn_int
+    label: Symbol Wise Open Interest (DFC)
+    section: Futures Market
+    exts: ["pdf", "xls"]
+    first_available: null
+
+  - key: csf_opn_int
+    label: Symbol Wise Open Interest (CSF)
+    section: Futures Market
+    exts: ["pdf", "xls"]
+    first_available: null
+
+  # ---- SIF Market ------------------------------------------------------
+  - key: sif_opn_int
+    label: Open Interest Report
+    section: SIF Market
+    exts: ["csv"]
+    first_available: null
+
+  - key: sif_fair_val
+    label: Fair Value Report
+    section: SIF Market
+    exts: ["pdf"]
+    first_available: null
+
+  # ---- DFC Market ------------------------------------------------------
+  - key: dfc_nbs
+    label: Net Blank Sale Position in DFC Market
+    section: DFC Market
+    exts: ["csv"]
+    first_available: null
+
+  # ---- VAR Margins -----------------------------------------------------
+  - key: var_margin
+    label: VAR Margins
+    section: VAR Margins
+    exts: ["zip"]
+    first_available: null
+
+  # ---- Ready Mkt Short Sell -------------------------------------------
+  - key: short_sell_vol
+    label: Ready Market Short Sell Vol
+    section: Ready Mkt Short Sell
+    exts: ["pdf"]
+    first_available: null
+
+  # ---- Daily Announcements --------------------------------------------
+  - key: announce
+    label: Daily Announcements
+    section: Daily Announcements
+    exts: ["pdf"]
+    first_available: null
+
+  # ---- Daily Quotations ------------------------------------------------
+  - key: quote
+    label: Daily Quotations
+    section: Daily Quotations
+    exts: ["pdf"]
+    first_available: null
+
+  # ---- Position Limits -------------------------------------------------
+  - key: pos_limit_fut
+    label: Position Limits
+    section: Position Limits
+    exts: ["xls"]
+    first_available: null
+
+  # ---- Other -----------------------------------------------------------
+  - key: itsubs
+    label: Internet Trading Subscribers List
+    section: Other
+    exts: ["pdf"]
+    first_available: null
+
+  - key: indhist
+    label: Constituent Data (PSX Indices)
+    section: Other
+    exts: ["xls"]
+    first_available: null
+
+  # ---- Post Close ------------------------------------------------------
+  - key: post_close
+    label: Post Close Report
+    section: Post Close
+    exts: ["Z"]
+    first_available: null

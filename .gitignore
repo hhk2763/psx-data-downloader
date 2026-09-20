@@ -1,0 +1,30 @@
+# --- The archive itself. Never commit downloaded PSX data. ---
+data/
+*.part
+
+# --- Internal working notes, not part of the public project ---
+CLAUDE.md
+PLAN.md
+.claude/
+how to run.txt
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+env/
+*.egg-info/
+build/
+dist/
+
+# --- Secrets & local config ---
+.env
+.streamlit/secrets.toml
+
+# --- Editors / OS ---
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
